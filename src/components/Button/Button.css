@@ -2,3 +2,15 @@
   color: blue;
   background-color: grey;
 }
+
+.color-red {
+  color: red;
+}
+
+.color-red button {
+  color: inherit;
+}
+
+.custom-blue {
+  color: blue;
+}

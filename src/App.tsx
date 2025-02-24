@@ -1,30 +1,29 @@
 import './App.css'
-import { useFetch } from './hooks'
+import { Button, ColorRed, AppForms } from './components';
 
-const url = "https://rickandmortyapi.com/api/episode/1"
-interface Data {
-  id: number;
-  name: string;
-  air_date: string;
-  episode: string
-  characters: Array<string>;
-  url: string;
-  created: string;
+const handleClick = () => {
+  console.log('uy me clikio todo')
+}
+
+const dimeHola = () => {
+  alert('Hola!')
+}
+
+const submit = () => {
+  console.log('sumit')
 }
 
 function App() {
-  const {data, loading, error} = useFetch<Data>(url);
-  
-  if (loading) {
-    return <h1>Cargando...</h1>
-  }
-
-  if (error) {
-    return <div>UPS! Hay un Error: {error.message} </div>
-  }
-
   return (
-      <div>{JSON.stringify(data)}</div> 
+    <>
+      <ColorRed><Button parentMethod={dimeHola}>My button</Button></ColorRed>
+      <Button parentMethod={handleClick}>
+        My Button normal
+      </Button>
+      <AppForms>
+        <button type="submit" onClick={submit} >Submit</button>
+|      </AppForms>
+   </>
   )
 }
 
