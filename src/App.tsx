@@ -1,5 +1,8 @@
+import { createContext } from 'react';
 import './App.css'
 import { Button, ColorRed, AppForms } from './components';
+
+export const GentlemanContext = createContext({})
 
 const handleClick = () => {
   console.log('uy me clikio todo')
